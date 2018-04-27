@@ -50,6 +50,14 @@ const toElement = (str)=>{
     temp.innerHTML = str;
     return temp.firstElementChild;
 }
+function htmlEncode(text) {
+    return (
+        text
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+    );
+}
 const closeDrawer = (e)=>{
     if(e){
         e.preventDefault();
@@ -75,8 +83,8 @@ const showViolations = (violations)=>{
         return showNoViolations();
     }
     const createLi = (violation) =>`<li>
-            <h3>${violation.description}</h3>
-            <p>${violation.help}</p>
+            <h3>${htmlEncode(violation.description)}</h3>
+            <p>${htmlEncode(violation.help)}</p>
             ${violation.nodes.map(createNode).join("")}
         </li>`
     const createNode = node =>{
@@ -88,11 +96,11 @@ const showViolations = (violations)=>{
                 return
             }
             if(txt.lastIndexOf(":") === txt.length-1){
-                arrayOfStrings.push(`<h5>${txt}</h5><ul>`);
+                arrayOfStrings.push(`<h5>${htmlEncode(txt)}</h5><ul>`);
                 return;
             }
             if(txt.length){
-                arrayOfStrings.push(`<li>${txt}</li>`);
+                arrayOfStrings.push(`<li>${htmlEncode(txt)}</li>`);
                 return;
             }
             
@@ -113,7 +121,7 @@ const showViolations = (violations)=>{
 
 const showNoViolations = ()=>{
     const drawer = createDrawer();
-    drawer.appendChild(toElement(`<h1>Horray no violations</h1>`));
+    drawer.appendChild(toElement(`<h3>Horray no violations</h3>`));
     document.body.appendChild(drawer);
     return drawer;
 }
