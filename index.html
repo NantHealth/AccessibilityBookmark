@@ -4,12 +4,47 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>TEST</title>
+    <title>Accessibility Bookmark</title>
+    <style>
+        html, body{
+            margin:0;
+            padding:0;
+            font-family: Arial, Helvetica, sans-serif;
+
+        }
+        .center{
+            margin:0 auto;
+            max-width:1200px;
+        }
+    </style>
 </head>
 <body>
-    <a href="javascript:(function(){document.body.appendChild(document.createElement('script')).src='http://127.0.0.1:8080/dist/bundle.js';})();">Accessibility Bookmarklet</a>
-    <input type="text" class="test item">
-    <input type="text" class="test item22">
-    <button><img src="http://www.placepuppy.net/50/50"></button>
+    <div class="center">
+    <h1>NantHealth Accessibility Bookmark</h1>
+    <p>Created to allow us to easily test any page quickly by clicking on a bookmark. To install simply drag the link below to your bookmark bar.
+    </p>
+    <h2>Usage </h2>
+    <p>Once your bookmark is installed</p>
+    <ol>
+            <li>Navigate to the page you want to test</li>
+            <li>Click your bookmark to install the tester on the page</li>
+            <li>Then click the accessibility icon which appears in the bottom right</li>
+            <li>You should see the results appear on the right hand side of the page, NOTE for some large pages this may take some time.</li>
+    </ol>
+    <h2>Install</h2>
+    <p>Click and drag the link below to your address bar.</p>
+    <p>
+    <a href="javascript:(function(){document.body.appendChild(document.createElement('script')).src='http://127.0.0.1:8080/dist/bundle.js';})();">NH Accessibility Bookmarklet</a>
+</p>
+    <h2>Uninstall</h2>
+    <p>Simply refresh your page and the page will load without the accessibility tester on it.</p>
+
+    <h2>Test elements with errors</h2>
+    <div>
+        <input type="text" class="test item">
+        <input type="text" class="test item22">
+        <button><img src="http://www.placepuppy.net/50/50"></button>
+    </div>
+    </div>
 </body>
 </html>
