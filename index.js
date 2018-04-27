@@ -88,7 +88,7 @@ const showViolations = (violations)=>{
             ${violation.nodes.map(createNode).join("")}
         </li>`
     const createNode = node =>{
-        const title = `<h4 class="node">${node.target.join(", ")}</h4>`;
+        const title = `<h4><code>${node.target.join(", ")}</code></h4>`;
         const arrayOfStrings = [];
         node.failureSummary.split("\n").forEach(txt=>{
             if(!txt.length){
