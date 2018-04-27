@@ -14,7 +14,7 @@ const svg = `<svg role="presentation" fill="#000000" height="24" viewBox="0 0 24
 <path d="M12 2c1.1 0 2 .9 2 2s-.9 2-2 2-2-.9-2-2 .9-2 2-2zm9 7h-6v13h-2v-6h-2v6H9V9H3V7h18v2z"/>
 </svg>`;
     const button = document.createElement("button");
-    button.classList.add("action-button");
+    button.classList.add("accessibility-bookmarklet-action-button");
     button.setAttribute("aria-label","Click run test page for accessibility");
     button.innerHTML = svg;
     document.body.appendChild(button);
@@ -28,7 +28,7 @@ const buttonClicked = ()=>{
     executing = true;
     closeDrawer();
     axe.run({
-        exclude:[[".action-button"]]
+        exclude:[[".accessibility-bookmarklet-action-button"]]
     },{
         runOnly: {
             type: "tag",
