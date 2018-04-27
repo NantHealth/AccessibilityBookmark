@@ -1,0 +1,23 @@
+{
+    "presets": [
+      [
+        "env",
+        {
+          "targets": {
+            "browsers": [
+              "IE 10",
+              "IE 11",
+              "last 2 Chrome versions",
+              "last 2 edge versions",
+              "last 2 firefox versions",
+              "Safari 9",
+              "Safari 10"
+            ]
+          },
+          "modules": false
+        }
+      ],
+      "stage-3"
+    ]
+  }
+  
