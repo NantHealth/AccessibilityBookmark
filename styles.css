@@ -3,7 +3,7 @@ button.accessibility-bookmarklet-action-button{
     padding:0;
     margin:0;
     position:fixed;
-    z-index:10000;
+    z-index:1000000;
     bottom:20px;
     right:20px;
     height:48px;
@@ -30,7 +30,7 @@ div.accessibility-bookmarklet-results{
     position: fixed;
     box-sizing: border-box;
     background-color: #f7f7f7;
-    z-index: 100000;
+    z-index:1000000;
     right: 0;
     top: 0;
     padding: 24px 10px;
